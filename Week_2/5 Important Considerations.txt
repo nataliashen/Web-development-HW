@@ -1,1 +1,6 @@
-This article really emphasized the collaborative aspect of planning a website. When sketching out a design, it is important to communicate and closely work with the developers, designers, and product manager involved. The team can help to clarify the problem as well as anticipate any problems that may arise. In addition, the designer should also be creating the wireframe with this specific audience in mind. All of this will help to create the best website possible. And by explaining the process to other people, the designer will also gain a better idea of what he/she is designing. Collaboration is not only helpful in the web development process but in general it’s just a really useful skill to have in a work environment.
+This article really emphasized the collaborative aspect of planning a website. When sketching out a design, it is important to communicate 
+and closely work with the developers, designers, and product manager involved. The team can help to clarify the problem as well as 
+anticipate any problems that may arise. In addition, the designer should also be creating the wireframe with this specific audience in 
+mind. All of this will help to create the best website possible. And by explaining the process to other people, the designer will also 
+gain a better idea of what he/she is designing. Collaboration is not only helpful in the web development process but in general it’s just 
+a really useful skill to have in a work environment.
