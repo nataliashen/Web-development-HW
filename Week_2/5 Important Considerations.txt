@@ -1,4 +1,4 @@
-http://sites.bxmc.poly.edu/~nataliashen/Webdev/
+http://sites.bxmc.poly.edu/~nataliashen/Webdev/index.php/2017/02/03/hello-world/
 
 This article really emphasized the collaborative aspect of planning a website. When sketching out a design, it is important to communicate 
 and closely work with the developers, designers, and product manager involved. The team can help to clarify the problem as well as 
