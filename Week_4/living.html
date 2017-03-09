@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Learn French with David</title>
+  <meta name="description" content="Learn French online for free">
+  <meta name="keywords" content="French, language, lesson">
+
+<style type="text/css">
+
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body{
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14.5px;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0; 
+}
+
+header{
+  background-color: rgba(255, 218, 224, 0.4);
+}
+
+header h1{
+  color: black;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 60px;
+  padding-left: 30px;
+}
+
+header nav{ 
+  display: inline-block; 
+  float: right;
+  height: 95px;
+  width: 1114px;
+}
+
+nav ul{
+  list-style-type: none;
+  text-align: right;
+  line-height: 70px;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  display: block;
+  padding: 0 100px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+nav ul li a:hover{
+  background-color: #FFDAE0;
+}
+
+.sticky-navbar{
+  position: fixed;
+}
+
+.container{
+  width: 1100px;
+  padding-top: 115px;
+  margin: 0 auto;
+}
+
+.room{
+  display: block;
+}
+
+#pagetitle{
+  padding-left: 30px;
+  padding-right: 5px;
+  margin-top: -2200px;
+  position: fixed;
+  background-color: cornsilk;
+  width: 95px;
+  margin-left: 20px;
+}
+
+#asideright{
+  padding-left: 1305px;
+  margin-top: -1930px;
+  position: fixed;
+}
+
+#asideleft{
+  padding-left: 100px;
+  margin-top: -1930px;
+  position: fixed;
+}
+
+.icon1{
+  margin-left: 540px;
+  margin-top: -1695px;
+  position: absolute;
+}
+
+.icon2{
+  margin-left: 390px;
+  margin-top: -1665px; 
+  position: absolute;
+}
+
+.icon3{
+  margin-left: 730px;
+  margin-top: -1945px; 
+  position: absolute;
+}
+
+.icon4{
+  margin-left: 865px;
+  margin-top: -890px;
+  position: absolute;
+}
+
+.icon5{
+  margin-left: 1190px;
+  margin-top: -1100px;
+  position: absolute;
+}
+
+.icon6{
+  margin-left: 560px;
+  margin-top: -600px;
+  position: absolute;
+}
+
+.icon7{
+  margin-left: 500px;
+  margin-top: -320px;
+  position: absolute;
+}
+
+.icon8{
+  margin-left: 350px;
+  margin-top: -120px;
+  position: absolute;
+}
+
+.infoModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+    
+.infoModal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+    
+.infoModal > div {
+  width: 200px;
+  height: 180px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px;
+  background: #fff;
+}
+    
+.close {
+  width: 20px;
+  height: 20px;
+  background: white;
+  color: black;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  text-decoration: none;
+}
+ 
+.close:hover {
+  color: blue;
+}
+
+#player{
+  width: 95%;
+}
+</style>
+</head>
+
+<body>
+<header class="sticky-navbar">
+  <a href="midterm.html"><h1>Learn French With David</h1></a>
+  <nav>
+    <ul>
+      <li><a href="review.html"><b>Review</a></b></li>
+      <li><a href="about.html"><b>About</a></b></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <div class="room">
+    <img src="img/_DSC0224.jpg">
+    </div>
+  <div class="room">
+  <img src="img/_DSC0109.jpg">
+    </div>
+  <div class="room">
+    <img src="img/_DSC0212.jpg">
+    </div>
+</div>
+
+<div class="icon1">
+  <a href="#info1"><img src="img/1.png"></a>
+    <div id="info1" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>song</h2>
+        <p>chante <em>f</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/Song.mp3">
+        </audio> 
+      </div>
+    </div>
+</div> 
+
+<div class="icon2">
+  <a href="#info2"><img src="img/2.png"></a>
+    <div id="info2" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>record player</h2>
+        <p>tourne-disque <em>m</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/Record Player.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<div class="icon3">
+  <a href="#info3"><img src="img/3.png"></a>
+    <div id="info3" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>The Beach Boys</h2>
+        <p>Les Garçons de la Plage</p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/BeachBoys.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<div class="icon4">
+  <a href="#info4"><img src="img/1_1.png"></a>
+    <div id="info4" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>book</h2>
+        <p>livre <em>m</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/Book.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<div class="icon5">
+  <a href="#info5"><img src="img/2_1.png"></a>
+    <div id="info5" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>flower</h2>
+        <p>fleur <em>f</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/Flower.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<div class="icon6">
+  <a href="#info6"><img src="img/1_2.png"></a>
+    <div id="info6" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>sofa</h2>
+        <p>canapé <em>m</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/Sofa.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<div class="icon7">
+  <a href="#info7"><img src="img/2_2.png"></a>
+    <div id="info7" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>table</h2>
+        <p>table <em>f</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/Table.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<div class="icon8">
+  <a href="#info8"><img src="img/3_2.png"></a>
+    <div id="info8" class="infoModal">
+      <div> <a href="#close" title="Close" class="close">X</a>
+        <h2>rug</h2>
+        <p>tapis <em>m</em> </p>
+        <br>
+        <audio id="player" controls>
+          <source src="audio/.mp3">
+        </audio> 
+      </div>
+    </div>
+</div>
+
+<aside>
+<div id="asideright">
+  <a href="kitchen.html"><p>NEXT ROOM ></p></a>
+</div>
+</aside>
+
+<aside>
+<div id="pagetitle">
+  <p><em>L a<br>c u i s i n e</em></p>
+</aside>
+</body>
+
+</html>

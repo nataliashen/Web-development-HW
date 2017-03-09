@@ -1,0 +1,111 @@
+<DOCTYPE html>
+<html>
+<head>
+	<title>Hero|Jumbotron Tagline Grid | Font Awesome</title>
+	
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/base.css">
+	<link rel="stylesheet" href="css/grid.css">
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+	<style type="text/css">
+	
+	/* remove margin and padding */
+
+		body{
+			margin: 0;
+			padding: 0;
+			font-family: "Helvetica", Arial, sans-serif;
+		}
+		div.hero{
+			width: 100vw;
+			position: relative;
+		}
+
+		.hero img{
+			width: 100%
+			/* make this parent container position relative so we can position absolute or relative over it with a child element */
+		}
+
+		.hero article{
+			width: 50vw;
+			/* if we want to center it over the image horizontally don't use right property */
+			/* margin 0 25vw; */
+			position: absolute;
+			right: 0;
+			top: 60%;
+			color: white;
+			background-color: rgba(100,100,100,0.5);
+			background: linear-gradient(to right, rgba(100,100,100,1) 0%, rgba(255, 255, 255, 0) 100%);
+		}
+
+		button, a.button{
+			/* for a button elements */
+			border: 2px solid black;
+			/* CSS3 you will need browser prefixes */
+			border-radius: 7px;
+			display: inline-block;
+			line-height: 25px;
+			width: 200px;
+			padding: 5px;
+			background-color: #FFF;
+			font-size: 18px;
+			/* Anchor Tags */
+			color: black;
+			text-decoration: none;
+			text-align: center;
+			/* Anchor Tag with role button and no href */
+			cursor: pointer;
+			transition: all 0.5s linear;
+		}
+
+		button:hover, 
+		a.button:hover{
+			border-color: white;
+			background-color: black;
+			color: white;
+		}
+		
+		header{
+			width: 100%;
+			background-color: black;
+			color: white;
+			position: fixed;
+			z-index: 100;
+			height: 50px;
+			line-height: 50px;
+		}
+		
+		nav h1{
+			margin: 0;
+		}
+
+		nav ul{
+			list-style-type: none;
+		}
+
+	</style>
+</head>
+
+<body>
+	<header>
+		<nav class="container clearfix">
+			<h1 class="grid_2">Logo</h1>
+			<ul class="grid_3 prefix_7">
+				<li class="grid_1 alpha"><i class="fa fa-facebook-square"></i></li>
+				<li class="grid_1">2</li>
+				<li class="grid_1 omega">3</li>
+			</ul>
+		</nav>
+	</header>
+	<div class="hero">
+		<img src="http://placehold.it/600x300/333333/FFFFFF?text=web-dev-rocks">
+		<article>
+		<h1>Selling Your Stuff</h1>
+		<p> This is a paragraph that explains why you need to buy all the stuff on the website.</p>
+		<a class="button" href="#">Link to Stuff</a>
+		<a class=
+		<button>Buy The Stuff</button>
+		</article>
+</div>
+</body>
+</html>

@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Event Listeners/Delegation (Teaser)</title>
+	<style type="text/css">
+	img{
+		display: block;
+	}
+		.hidden{
+			display: none;
+		}
+	</style>
+</head>
+<body>
+	<button id="hideBtn">Hide</button>
+	<div>
+	<img id="bill" src="http://www.fillmurray.com/800/400"/> 
+	</div>
+	</style>
+	<script type="text/javascript">
+		// wait for the DOM to be loaded before executing certain lines of code 
+	document.addEventListener('DOMContentLoaded', function () {
+		console.log('locked and loaded');
+		// add our event listeners after our DOM has fully loaded 
+		// in this example the callback function is anonymous, aka we call a function here and it happens and never can be called elsewhere 
+		document.getElementById('hideBtn').addEventListener('click', hideMurray);
+	});
+
+		function hideMurray(){
+			var murray = document.getElementById('bill');
+			murray.classList.toggle('hidden');
+		}
+	</script>
+</body>
+
+</html>
