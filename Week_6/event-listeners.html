@@ -24,6 +24,12 @@
 		// add our event listeners after our DOM has fully loaded 
 		// in this example the callback function is anonymous, aka we call a function here and it happens and never can be called elsewhere 
 		document.getElementById('hideBtn').addEventListener('click', hideMurray);
+
+		document.getElementById('eventH1').addEventListener('mouseover',function(event)){
+			console.log(event.target);
+			var el = event.target;
+			el.classList.toggle('active');
+		}
 	});
 
 		function hideMurray(){

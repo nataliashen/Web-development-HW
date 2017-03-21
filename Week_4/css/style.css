@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css?family=Source+Sans+Pro');
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+  font-size: 14.5px;
+  color: black;
+  background-color: white;
+  margin: 0;
+  padding: 0; 
+}
+
+header{
+  background-color: rgba(255, 218, 224, 0.4);
+}
+
+header h1{
+  color: black;
+  display: inline-block;
+  max-width: 100%;
+  line-height: 60px;
+  padding-left: 30px;
+}
+
+header nav{ 
+  float: right;
+  height: 95px;
+  width: 1114px;
+}
+
+nav ul{
+  list-style-type: none;
+  text-align: right;
+  line-height: 70px;
+}
+
+nav ul li{
+  display: inline-block;
+}
+
+nav ul li a{
+  display: block;
+  padding: 0 100px;
+  color: black;
+  text-decoration: none;
+  transition: background-color 0.5s;
+}
+
+nav ul li a:hover{
+  background-color: #FFDAE0;
+}
+
+.sticky-navbar{
+  position: fixed;
+}
+
+.photo-parent{
+  width: 1100px;
+  padding-top: 115px;
+  margin: 0 auto;
+}
+
+.photo-parent div.icon {
+  background-color: white;
+  border-radius: 20px;
+  border: 2px solid;
+  width: 18px;
+  height: 18px;
+  color: black;
+  line-height: 18px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.photo-parent div.icon a{
+  text-decoration: none;
+  font-family: arial;
+  color: black;
+}
+
+.infoModal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background: rgba(0, 0, 0, 0.2);
+  z-index: 99999;
+  opacity: 0;
+  transition: opacity 400ms ease-in;
+  pointer-events: none;
+}
+    
+.infoModal:target {
+  opacity: 1;
+  pointer-events: auto;
+}
+    
+.infoModal > div {
+  width: 200px;
+  height: 180px;
+  position: relative;
+  margin: 10% auto;
+  padding: 15px;
+  background: #fff;
+}
+    
+.close {
+  width: 20px;
+  height: 20px;
+  background: white;
+  color: black;
+  position: absolute;
+  right: 0px;
+  text-align: center;
+  top: 0px;
+  text-decoration: none;
+}
+ 
+.close:hover {
+  color: blue;
+}
+
+#player{
+  width: 95%;
+}
