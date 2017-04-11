@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Bootstrap Grid</title>
+	<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+<style type="text/css">
+/* make every div that does NOT have the class well have a blue background and clip the background to avoid padding */
+	div:not(.well){
+		background-color: rgba(0,0,255,0.1);
+		/* border: 1px solid blue; */
+		background-clip: content-box;
+		min-height: 50px;
+	}
+
+	.row{
+		margin-top: 20px;
+	}
+</head>
+</style>
+<body>
+
+
+<div class="container-fluid"> 
+	<h1>Class Containers Responsive</h1> 
+	<div class="row">
+	<!-- 12 grid system. modify for xs, sm, md, lg screens -->
+		<div class="col-xs-12 col-sm-6 col-md-3"><p>col-xs-12 col-sm-6 col-md-3</p></div>
+		<div class="col-xs-12 col-sm-6 col-md-3"><p>col-xs-12 col-sm-6 col-md-3</p></div>
+		<div class="col-xs-12 col-sm-6 col-md-3"><p>col-xs-12 col-sm-6 col-md-3</p></div>
+		<div class="col-xs-12 col-sm-6 col-md-3"><p>col-xs-12 col-sm-6 col-md-3</p></div>
+	</div>
+	<h2>Offsets</h2>
+	<div class="row">
+		<div class="col-md-4"><p>col-md-4</p></div>
+		<div class="col-md-2 col-md-offset-1"><p>col-md-2 col-md-offset-1</p></div>
+		<div class="col-md-4 col-md-offset-1"><p>col-md-4 col-md-offset-1</p></div>
+	<div class="row">
+		<div class="col-md-6 col-md-offset-3"><p>col-md-6 col-md-offset-3</p></div>
+	</div>
+</div>
+	<h2>Nesting Columns</h2>
+	<div class="row">
+		<div class="col-md-8"><p>Level 1: col-md-8</p></div>
+			<div class="row">
+				<div class="col-md-6"><p>Level 2: col-md-6</p></div>
+				<div class="col-md-6"><p>Level 2: col-md-6</p></div>
+			</div>
+		</div>
+		<div class="col-md-4"><p>Level 1: col-md-4</p></div>
+		<div class="row">
+			<div class="Level 2: col-md-6"><p>Level 2: col-md-6</p></div>
+			<div class="Level 2: col-md-6"><p>Level 2: col-md-6</p></div>
+		</div>
+	</div>
+</div>
+</div>
+
+<div class="container" style="margin-top: 50px">
+<h2>Hide Show Toggle</h2>
+	<button class="btn btn-danger" id="hideMe">Hide</button>
+	<button class="btn btn-success" id="showMe">Show</button>
+	<button class="btn btn-warning" id="toggleHide">Toggle Visibility</button>
+
+<div class="well">
+	<p>This is a div with the class well. We are going to use $.hide() to make it disappear. We are going to use $('.well:first') as our selector</p>
+	</div>
+</div> 
+
+<div class="container">
+<h2>Fade In and Out</h2>
+	<button class="btn btn-danger" id="fadeOut">Fade Out</button>
+	<button class="btn btn-success" id="fadeIn">Fade In</button>
+	<button class="btn btn-warning" id="toggleFade">Toggle Fade</button>
+
+<div class="well" id="fadeMe">
+	<p>This is a div with the class well. We are going to use $.hide() to make it disappear. We are also going to use $('#fadeMe') as our selector</p>
+	</div>
+</div> 
+
+<div class="container">
+<h2>Slide Up and Down</h2>
+	<button class="btn btn-danger" id="slideUp">Slide Up</button>
+	<button class="btn btn-success" id="slideDown">Slide Down</button>
+	<button class="btn btn-warning" id="toggleSlide">Toggle Slide</button>
+
+<div class="well">
+	<p>This is a div with the class well. We are going to use $.hide() to make it disappear. We are going to use $('.well:first') as our selector</p>
+	<br><br> 
+	</div>
+</div> 
+
+<div class="container"> 
+	<p id="mouseMe">This paragraph is going to have 2 event listeners attached to it at once using jquery. mouse over and mouse out to see what's up!</p>
+</div>
+
+<!-- Always load jquery before trying to use it -->
+<script
+  src="http://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+
+<script type="text/javascript">
+	// grab the document object, listen for it to be ready (loaded)
+	$(document).ready(function(){
+
+	// Hide Show Toggle
+	$('#hideMe').click(function(){
+		$('well:first').hide();
+	});
+
+	$('#showMe').click(function(){
+		$('well:first').show(); 
+	}); 
+
+	$('#toggleHide').click(function(){
+		$('well:first').toggle();
+	});
+
+	// Fade In and Out and toggle fade 
+
+	$('#fadeOut').click(function(){
+		$('#fadeMe').fadeOut(1000);
+	});
+
+	$('#fadeIn').click(function(){
+		$('#fadeMe').fadeIn('slow');
+	});
+
+	$('#toggleFade').click(function(){
+		$('#fadeMe').fadeToggle('slow');
+	});
+
+	// Slide Up and Down and toggle slide 
+
+	$('#slideUp').click(function(){
+		$('.well:last').slideUp(1000); 
+	}); 
+
+	$('#slideDown').click(function(){
+		$('.well:last').slideDown('slow'); 
+	}); 
+
+	$('#toggleSlide').click(function(){
+		$('.well:last').slideToggle('fast'); 
+	}); 
+
+	// double event time... 
+	$('#mouseMe').on(
+	{
+		mouseenter: function() { 
+			console.log('Mouse has entered the paragraph...');
+		},
+		mouseleave: function() {
+			console.log('Mouse has left the paragraph...');
+		}, 
+		dblclick: function() {
+			alert('Double Clicked!');
+
+		}
+	});
+	
+
+	});
+</script>
+
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+</body>
+</html>

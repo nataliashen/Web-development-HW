@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>User Input Simple</title>
+	<style>
+	h1{
+		text-transform: uppercase;
+	}	
+	.red{
+		color: red;
+	}
+	.green{
+		color: seagreen;
+	}
+	.blue{
+		color: blue;
+	}
+	.purple{
+		color: rebeccapurple;
+	}
+	</style> 
+	<script type="text/javascript">
+	// declare our element variable globally 
+	var my Heading; 
+	var myNumber; 
+	var myBtn;
+
+	document.addEventListener('DOMContentLoaded', function(){
+		myHeading = document.getElementbyId('changeMe');
+		myNumber = document.getElementbyId('num');
+		myBtn = document.getElementbyId('changeBtn');
+		myBtn.addEventListener('click', changeHeadingClass);
+
+	});
+
+	function changeHeadingClass(){
+		// took the value from the user input (element we stored as myNumber)
+		var n = myNumber.value; 
+		// it comes in as a string! we can't check it against numbers or do math 
+		console.log(typeof n);
+		// parse the number out of our string 
+		n = parseInt(n);
+		// now it's a type number, so we can do math
+		console.log(typeof n);
+
+		// use a switch statement to check which number was entered and applied classes accordingly 
+
+		switch(n){
+			case 0:
+				myHeading.className = 'red';
+				break; 
+			case 1:
+				myHeading.classname = 'green'; 
+				break; 
+			case 2:
+				myHeading.classname = 'blue';
+				break; 
+			case 3
+				myHeading.classname = 'purple'; 
+				break; 
+			default: 
+				// this is what you do if it doesn't match any of the classes above 
+				myHeading.innerHTML = "Hey, we said a whole number between 0 and 3"
+				break; 
+		}
+
+	}
+	</script>
+</head>
+
+<body>
+	<h1 id="changeMe">I will change based on the number a user picks!</h1>
+	<form>
+		<fieldset>
+			<legend>Pick a Number to cahnge the heading</legend>
+			<label for="num">Number between 0 and 3</label>
+			<input type="number" name="num" id="num" min="0" max="3" step="1" placeholder="0">
+			<button type="button" id="changeBtn">Click to Change Color</button>
+		</fieldset>
+	</form>
+</body>
+
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<link href="https://fonts.googleapis.com/css?family=Timmana" rel="stylesheet">
+
+<style type="text/css">
+  	body{
+  	  	background-color: #ffc3e1;
+  	  	margin-top: 220px;
+	  	text-align: center;
+	  	color: blue;
+	  	font-family: 'Timmana', sans-serif;
+		font-size: 110px;
+  	}	
+
+	.button {
+    	background-color: blue; 
+    	border: none;
+    	color: white;
+    	padding: 15px;
+    	width: 35%;
+    	text-decoration: none;
+    	display: inline-block;
+    	font-size: 20px;
+    	border-radius: 10px;
+    	cursor: pointer;
+	}
+</style>
+</head>
+
+<body>
+	<div class="container"><span id="target"></span></div>
+	<button class="button" id="button" onclick="newText()">I'M BORED AND ALONE.. WHAT SHOULD I DO?</button>
+
+	<script type="text/javascript">
+		var target = document.getElementById('target');
+		var arrText = [
+	    	'Dance naked to Al Green',
+	    	'Throw a kitty party',
+	    	'Stop checking your phone',
+	    	'Make a mixtape',
+	    	'Cry over nothing, it feels good',
+	    	'Move around like a ghost',
+	    	'Notice the lighting in the room',
+	    	'Write about your sappy feelings',
+	    	'Play Tetris in your head',
+	    	'Make a zine'
+   		 ];
+
+		function newText () {
+    	var i = (Math.random() * arrText.length) | 0;
+    	target.innerText = arrText[i];
+		}
+
+		document.addEventListener("DOMContentLoaded", function(){
+			newText();
+		});
+
+	</script>
+</body>
+</html>
+
