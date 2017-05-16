@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Learn French with David</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+    <style type="text/css">
+  
+    .photo-parent{
+      width: 1100px;
+      padding-top: 15px;
+      margin: 0 auto;
+      width:80%;
+      position:relative;
+    }
+
+    .photo-parent img{
+      width:100%;
+      height: auto;
+      padding: .2%;
+    }
+
+    #pagetitle{
+      padding-left: 30px;
+      padding-top: 10px;
+      margin-top: -2200px;
+      position: fixed;
+      background-color: cornsilk;
+      width: 120px;
+      height: 60px;
+      margin-left: 1%;
+      letter-spacing: 2.5px;
+      text-align: left;
+    }
+
+    #asideright{
+      padding-left: 92%;
+      margin-top: -1930px;
+      position: fixed;
+    }
+
+    .btn {
+      background-color: white;
+      border-radius: 100%;
+      font-size: 11px;
+      border: 2px solid;
+      width: 22px;
+      height: 22px;
+    }
+
+    #button1{
+      margin-left: 30%;
+      margin-top: -25%;
+      position: absolute;
+    }
+
+    #button2{
+      margin-left: 77%;
+      margin-top: -15%; 
+      position: absolute;
+    }
+
+    #button3{
+      margin-left: 52%;
+      margin-top: -42%; 
+      position: absolute;
+    }
+
+    #button4{
+      margin-left: 63.5%;
+      margin-top: -12.5%;
+      position: absolute;
+    }
+
+    #button5{
+      margin-left: 93%;
+      margin-top: -30%;
+      position: absolute;
+    }
+
+    #button6{
+      margin-top: -55%;
+      position: absolute;
+    }
+
+    #button7{
+      margin-top: -29%;
+      position: absolute;
+    }
+
+    #button8{
+      margin-left: -35%;
+      margin-top: -10%;
+      position: absolute;
+    }
+
+    .modal-dialog{
+      position: relative;
+      width: 300px;
+      padding: 15px;
+    }
+
+    #player{
+      width: 95%;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class='container-fluid'>
+            <div class="navbar-header">
+                <a class="navbar-brand"><b>Learn French With David</a></b>
+            </div>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="review.html"><b>Review</a></b></li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="index.html"><b>Home</a></b></li>
+                </ul>
+        </div>
+    </nav>
+
+    <div class="photo-parent">
+        <img src="img/_DSC0224.jpg">
+          <button type="button" class="btn btn btn-xs" id="button1" data-toggle="modal" data-target="#btnModal">1</button>
+          <button type="button" class="btn btn btn-xs" id="button2" data-toggle="modal" data-target="#btnModal2">2</button>
+          <button type="button" class="btn btn btn-xs" id="button3" data-toggle="modal" data-target="#btnModal3">3</button>
+        <img src="img/_DSC0109.jpg">
+          <button type="button" class="btn btn btn-xs" id="button4" data-toggle="modal" data-target="#btnModal4">1</button>       
+          <button type="button" class="btn btn btn-xs" id="button5" data-toggle="modal" data-target="#btnModal5">2</button>
+        <img src="img/_DSC0212.jpg">
+          <button type="button" class="btn btn btn-xs" id="button6" data-toggle="modal" data-target="#btnModal6">1</button>
+          <button type="button" class="btn btn btn-xs" id="button7" data-toggle="modal" data-target="#btnModal7">2</button>
+          <button type="button" class="btn btn btn-xs" id="button8" data-toggle="modal" data-target="#btnModal8">3</button>
+    </div>
+
+    <div class="modal fade" id="btnModal" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>song</h3>
+                    <p>chanson <em>f</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Song.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal2" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>record player</h3>
+                    <p>tourne-disque <em>m</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Record Player.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal3" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>The Beach Boys</h3>
+                    <p>Les Garçons de la Plage</p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/BeachBoys.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal4" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>book</h3>
+                    <p>livre <em>m</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Book.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal5" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>flower</h3>
+                    <p>fleur <em>f</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Flower.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal6" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>sofa</h3>
+                    <p>canapé <em>m</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Sofa.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal7" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>table</h3>
+                    <p>table <em>f</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Table.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="btnModal8" tab-index="-1" role="dialog" aria-labelledby="btnModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="close">x</button>
+                    <h3>rug</h3>
+                    <p>tapis <em>m</em> </p>
+                    <br>
+                    <audio id="player" controls>
+                        <source src="audio/Rug.mp3">
+                    </audio>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <aside>
+    <div id="asideright">
+      <a href="kitchen.html"><p>NEXT ROOM ></p></a>
+    </div>
+    </aside>
+
+    <aside>
+    <div id="pagetitle">
+      <p><em>Le<br>salon</em></p>
+    </aside>
+
+    <script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="js/bootstrap.min.js"></script>
+</body>
+
+</html>

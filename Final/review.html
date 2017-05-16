@@ -1,0 +1,489 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <title>Learn French with David</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style2.css">
+
+    <style type="text/css">
+
+    body{
+       background-color: #fdf0f6;
+
+    }
+
+    div.card {
+        /*hide by default*/
+        display: none;
+    }
+    
+    div.card.active {
+        display: block;
+    }
+    
+    .card {
+        position: relative;
+        padding-bottom: 25%;
+        width: 25%;
+        text-align: center;
+        font-size: 52px;
+        top: -550px;
+        left: 416px;
+        cursor: pointer;
+    }
+    
+    .card__front,
+    .card__back {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 170%;
+        height: 119%;
+        border: solid 2px;
+        background: repeating-linear-gradient(#C3E6FC, #C3E6FC 1px, white 1px, white 25px);
+        background: -webkit-gradient(#C3E6FC, #C3E6FC 1px, white 1px, white 25px);
+        box-shadow: 3px 10px 5px #AAA;
+    }
+    .card__front,
+    .card__back {
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+        -webkit-transition: -webkit-transform 0.3s;
+        transition: transform 0.3s;
+
+    }
+    
+    .card__back {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+    /*    .card.active:hover .card__front {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+    
+    .card.active:hover .card__back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }*/
+    
+    .card.flipped .card__front {
+        -webkit-transform: rotateY(-180deg);
+        transform: rotateY(-180deg);
+    }
+    
+    .card.flipped .card__back {
+        -webkit-transform: rotateY(0);
+        transform: rotateY(0);
+    }
+
+    .card p{
+        margin-top: 25px;
+        border-top: 1px solid #ffb3b3;
+        padding-top: 142px;
+    }
+
+    .button {
+        border: 2px solid blue;
+        outline: none;
+        background-color: white;
+        color: blue;
+        padding: 15px;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+        margin-top: 550px;
+        left: 20px;
+        width: 400px;
+    }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class='container-fluid'>
+            <div class="navbar-header">
+                <a class="navbar-brand"><b>Learn French With David</a></b>
+            </div>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="review.html"><b>Review</a></b>
+                </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="index.html"><b>Home</a></b>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <div id="aside">
+    <button class="button" id="button" onclick="randomCard()">Shuffle</button></div>
+    <div class="card" id="song">
+        <div class="card__front">
+            <span class="card__text"><p>song</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>chante</p></span>
+        </div>
+    </div>
+    <div class="card" id="record">
+        <div class="card__front">
+            <span class="card__text"><p>record player</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>tourne-disque</p></span>
+        </div>
+    </div>
+    <div class="card" id="beach">
+        <div class="card__front">
+            <span class="card__text"><p>The Beach Boys</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>Les Garçons de la Plage</p></span>
+        </div>
+    </div>
+    <div class="card" id="book">
+        <div class="card__front">
+            <span class="card__text"><p>book</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>livre</p></span>
+        </div>
+    </div>
+    <div class="card" id="flower">
+        <div class="card__front">
+            <span class="card__text"><p>flower</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>fleur</p></span>
+        </div>
+    </div>
+    <div class="card" id="sofa">
+        <div class="card__front">
+            <span class="card__text"><p>sofa</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>canapé</p></span>
+        </div>
+    </div>
+    <div class="card" id="table">
+        <div class="card__front">
+            <span class="card__text"><p>table</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>table</p></span>
+        </div>
+    </div>
+    <div class="card" id="rug">
+        <div class="card__front">
+            <span class="card__text"><p>rug</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>tapis</p></span>
+        </div>
+    </div>
+    <div class="card" id="coffee">
+        <div class="card__front">
+            <span class="card__text"><p>coffee</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>café</p></span>
+        </div>
+    </div>
+    <div class="card" id="cigarettes">
+        <div class="card__front">
+            <span class="card__text"><p>cigarettes</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>cigarettes</p></span>
+        </div>
+    </div>
+    <div class="card" id="denim">
+        <div class="card__front">
+            <span class="card__text"><p>denim jacket</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>veste en jean</p></span>
+        </div>
+    </div>
+    <div class="card" id="chair">
+        <div class="card__front">
+            <span class="card__text"><p>chair</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>chaise</p></span>
+        </div>
+    </div>
+    <div class="card" id="strawberries">
+        <div class="card__front">
+            <span class="card__text"><p>strawberries</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>fraises</p></span>
+        </div>
+    </div>
+    <div class="card" id="tea">
+        <div class="card__front">
+            <span class="card__text"><p>tea</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>thé</p></span>
+        </div>
+    </div>
+    <div class="card" id="avocado">
+        <div class="card__front">
+            <span class="card__text"><p>avocado</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>avocat</p></span>
+        </div>
+    </div>
+    <div class="card" id="bacon">
+        <div class="card__front">
+            <span class="card__text"><p>bacon</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>bacon</p></span>
+        </div>
+    </div>
+    <div class="card" id="egg">
+        <div class="card__front">
+            <span class="card__text"><p>egg</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>ouef</p></span>
+        </div>
+    </div>
+    <div class="card" id="microwave">
+        <div class="card__front">
+            <span class="card__text"><p>microwave</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>micro-ondes</p></span>
+        </div>
+    </div>
+    <div class="card" id="fridge">
+        <div class="card__front">
+            <span class="card__text"><p>fridge</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>réfrigérateur</p></span>
+        </div>
+    </div>
+    <div class="card" id="sink">
+        <div class="card__front">
+            <span class="card__text"><p>sink</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>évier</p></span>
+        </div>
+    </div>
+    <div class="card" id="february">
+        <div class="card__front">
+            <span class="card__text"><p>February</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>Février</p></span>
+        </div>
+    </div>
+    <div class="card" id="lamp">
+        <div class="card__front">
+            <span class="card__text"><p>lamp</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>lampe</p></span>
+        </div>
+    </div>
+    <div class="card" id="nightstand">
+        <div class="card__front">
+            <span class="card__text"><p>nightstand</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>table de chevet</p></span>
+        </div>
+    </div>
+    <div class="card" id="bed">
+        <div class="card__front">
+            <span class="card__text"><p>bed</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>lit</p></span>
+        </div>
+    </div>
+    <div class="card" id="computer">
+        <div class="card__front">
+            <span class="card__text"><p>computer</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>ordinateur</p></span>
+        </div>
+    </div>
+    <div class="card" id="headphones">
+        <div class="card__front">
+            <span class="card__text"><p>headphones</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>casque</p></span>
+        </div>
+    </div>
+    <div class="card" id="pillow">
+        <div class="card__front">
+            <span class="card__text"><p>pillow</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>oreiller</p></span>
+        </div>
+    </div>
+    <div class="card" id="candle">
+        <div class="card__front">
+            <span class="card__text"><p>candle</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>bougie</p></span>
+        </div>
+    </div>
+    <div class="card" id="lighter">
+        <div class="card__front">
+            <span class="card__text"><p>lighter</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>briquet</p></span>
+        </div>
+    </div>
+    <div class="card" id="pillow">
+        <div class="card__front">
+            <span class="card__text"><p>pillow</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>oreiller</p></span>
+        </div>
+    </div>
+    <div class="card" id="darkness">
+        <div class="card__front">
+            <span class="card__text"><p>the darkness</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>osbscurité</p></span>
+        </div>
+    </div>
+    <div class="card" id="toothbrush">
+        <div class="card__front">
+            <span class="card__text"><p>toothbrush</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>brosse à dents</p></span>
+        </div>
+    </div>
+    <div class="card" id="soap">
+        <div class="card__front">
+            <span class="card__text"><p>soap</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>savon</p></span>
+        </div>
+    </div>
+    <div class="card" id="hot">
+        <div class="card__front">
+            <span class="card__text"><p>hot</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>chaud(e)</p></span>
+        </div>
+    </div>
+    <div class="card" id="cold">
+        <div class="card__front">
+            <span class="card__text"><p>cold</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>froid(e)</p></span>
+        </div>
+    </div>
+    <div class="card" id="lipstick">
+        <div class="card__front">
+            <span class="card__text"><p>lipstick</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>rouge à lèvres</p></span>
+        </div>
+    </div>
+    <div class="card" id="perfume">
+        <div class="card__front">
+            <span class="card__text"><p>perfume</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>parfum</p></span>
+        </div>
+    </div>
+    <div class="card" id="cabinet">
+        <div class="card__front">
+            <span class="card__text"><p>cabinet</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>petit placard</p></span>
+        </div>
+    </div>
+    <div class="card" id="makeup">
+        <div class="card__front">
+            <span class="card__text"><p>makeup</p></span>
+        </div>
+        <div class="card__back">
+            <span class="card__text"><p>maquillage</p></span>
+        </div>
+    </div>
+  
+    <script type="text/javascript">
+    var cards = ['song', 'record', 'beach', 'book', 'flower', 'sofa', 'table', 'rug', 'coffee', 'cigarettes', 'denim', 'chair', 'strawberries', 'tea', 'avocado', 'bacon', 'egg', 'microwave', 'fridge', 'sink', 'february', 'lamp', 'nightstand', 'bed', 'computer', 'headphones', 'pillow', 'candle', 'lighter', 'darkness', 'toothbrush', 'soap', 'hot', 'cold', 'lipstick', 'perfume', 'cabinet', 'makeup'];
+
+    (function() {
+        var cards = document.querySelectorAll(".card");
+        for (var i = 0, len = cards.length; i < len; i++) {
+            var card = cards[i];
+            clickListener(card);
+        }
+
+        function clickListener(card) {
+            card.addEventListener("click", function() {
+                var c = this.classList;
+                // condition to check ? what to do if true : else
+                c.contains("flipped") === true ? c.remove("flipped") : c.add("flipped");
+            });
+        }
+    })();
+
+    function randomCard() {
+        // remove any active classes if they exist
+        var allcards = document.getElementsByClassName('card');
+        for (var i = 0; i < allcards.length; i++) {
+            console.log(allcards[i])
+            if (allcards[i].classList.contains('active')) {
+                allcards[i].classList.remove('active');
+            }
+        }
+
+        var index = randNum(cards.length);
+        var cardToShow = cards[index];
+        var currentCard = document.getElementById(cardToShow);
+
+        currentCard.classList.add('active');
+    }
+
+    // what if we want a random number between 0 and 10? 
+    function randNum(max) {
+        var rn = Math.floor(max * Math.random());
+        return rn;
+    }
+
+    </script>
+
+<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+</body>
+</html>
+
+
