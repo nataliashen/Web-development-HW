@@ -45,9 +45,6 @@
         background: repeating-linear-gradient(#C3E6FC, #C3E6FC 1px, white 1px, white 25px);
         background: -webkit-gradient(#C3E6FC, #C3E6FC 1px, white 1px, white 25px);
         box-shadow: 3px 10px 5px #AAA;
-    }
-    .card__front,
-    .card__back {
         -webkit-backface-visibility: hidden;
         backface-visibility: hidden;
         -webkit-transition: -webkit-transform 0.3s;
@@ -120,7 +117,6 @@
         </div>
     </nav>
 
-    <div id="aside">
     <button class="button" id="button" onclick="randomCard()">Shuffle</button></div>
     <div class="card" id="song">
         <div class="card__front">
@@ -434,9 +430,11 @@
             <span class="card__text"><p>maquillage</p></span>
         </div>
     </div>
-  
+
     <script type="text/javascript">
     var cards = ['song', 'record', 'beach', 'book', 'flower', 'sofa', 'table', 'rug', 'coffee', 'cigarettes', 'denim', 'chair', 'strawberries', 'tea', 'avocado', 'bacon', 'egg', 'microwave', 'fridge', 'sink', 'february', 'lamp', 'nightstand', 'bed', 'computer', 'headphones', 'pillow', 'candle', 'lighter', 'darkness', 'toothbrush', 'soap', 'hot', 'cold', 'lipstick', 'perfume', 'cabinet', 'makeup'];
+    var i = 0;
+
 
     (function() {
         var cards = document.querySelectorAll(".card");
@@ -476,12 +474,7 @@
         var rn = Math.floor(max * Math.random());
         return rn;
     }
-
     </script>
-
-<script src="http://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
 </body>
 </html>
